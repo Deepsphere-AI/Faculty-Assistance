@@ -21,7 +21,7 @@ import ContentGeneration.convert as convert
 
 def content_gen():
     head.title()
-    st.markdown("<p style='text-align: center; color: black; font-size:20px;'><span style='font-weight: bold'>Problem Statement: </span>Application to Question Generator    </p>", unsafe_allow_html=True)
+    st.markdown("<p style='text-align: center; color: black; font-size:20px;'><span style='font-weight: bold'>Problem Statement: </span>Application to Content Generator    </p>", unsafe_allow_html=True)
     st.markdown("<hr style=height:2.5px;background-color:gray>",unsafe_allow_html=True)
     w12,col11,col22,w22=st.columns((1,2,2,1))
     up1,up2,up3=st.columns((1,2,1))
@@ -42,7 +42,7 @@ def content_gen():
     vAR_topics_list = ["Give "+str(vAR_topics_num)+" short topics from basics to advanced order for" + vAR_prompt_file]
 
     #Defining a prompt to instruct the gpt3 to generate content for each topics about 200 words. 
-    vAR_elaborate_prompt = "Elaborate the topic for 200 words without conclusion and without repetition :"
+    vAR_elaborate_prompt = "Elaborate the topic for 200 words without conclusion :"
 
     vAR_conclusion = "Write a conclusion for " + vAR_prompt_file
     #Creating a new word document.
