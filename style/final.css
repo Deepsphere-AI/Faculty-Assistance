@@ -22,11 +22,36 @@ span.css-10trblm.e16nr0p30 {
 div.nav-item.li.nav-item {
     --primary-color: hsl(240deg 100% 50%);
 }
-/* Sidebar button alignment */
-.row-widget.stButton {
-    margin-left: 80px;
+/* Sidebar button alignment*/
+input[type="submit"] {
+    border-radius: 2px;
+    background-color: #32CD32;
+    border: thick;
+    height: 42px;
+    width: 230px;
 }
-/* Sidebar button Colour */
-button.css-629wbf.edgvbvh10 {
-    background-color: #56db29;
+
+/* Font size */
+span.css-10trblm.e16nr0p30 {
+    font-size: 18px;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+/* Sidebar fixed */
+.css-163ttbj {
+    position: relative;
+    top: 2px;
+    background-color: rgb(240, 242, 246);
+    z-index: 999991;
+    min-width: 310px;
+    max-width: 310px;
+    transform: none;
+    transition: transform 300ms ease 0s, min-width 300ms ease 0s, max-width 300ms ease 0s;
+}
+.css-1vq4p4l.e1fqkh3o4 {
+    width: 260px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -70px;
 }
