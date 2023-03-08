@@ -20,24 +20,31 @@ with imcol2:
 with imcol3:
     st.write("")
 #---------Side bar-------#
+
 with st.sidebar:
     selected = st.selectbox("",
-                     ['Home',"Question Generation","Content Generation"],key='text')
+                     ['Select Application',"Question Generation","Content Generation"],key='text')
     Library = st.selectbox("",
-                     ["Library Used","Streamlit","Image","Math","Pandas"],key='text1')
+                     ["Library Used","Streamlit","Image","Pandas","Openai"],key='text1')
     Gcp_cloud = st.selectbox("",
                      ["GCP Services Used","VM Instance","Computer Engine","Cloud Storage"],key='text2')
-    st.markdown("")
-    def clear_text():
-            st.session_state["text"] = "Home"
-            st.session_state["text1"] = "Library Used"
-            st.session_state["text2"] = "GCP Services Used"
-    st.button("Clear/Reset", on_click=clear_text)
+    GPT_TOOL =  st.selectbox(" ",('Models Used','GPT3 - Davinci'),key='text3')
+    st.markdown("## ")
+    href = """<form action="#">
+            <input type="submit" value="Clear/Reset" />
+            </form>"""
+    st.sidebar.markdown(href, unsafe_allow_html=True)
+    st.markdown("### ")
+    st.markdown("<p style='text-align: center; color: White; font-size:20px;'>Build & Deployed on<span style='font-weight: bold'></span></p>", unsafe_allow_html=True)
+    s1,s2,s3=st.columns((2,3,2))
+    with s2:    
+        st.image("image/Google-Cloud-Platform-GCP-logo.png")
 #--------------function calling-----------#
 if __name__ == "__main__":
     try:
-        if selected == "Home":
+        if selected == "Select Application":
             head.title()
+            st.markdown("<hr style=height:2.5px;background-color:gray>",unsafe_allow_html=True)
         if selected == "Question Generation":
             ques.quens_gen()
         if selected == "Content Generation":

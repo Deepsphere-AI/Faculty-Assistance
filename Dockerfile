@@ -13,6 +13,5 @@ COPY . ./
 # Install production dependencies.
 RUN pip install -r requirements.txt
 
-
 # Timeout is set to 0 to disable the timeouts of the workers to allow Cloud Run to handle instance scaling.
 CMD streamlit run --server.port 8080 --server.enableCORS false app.py
