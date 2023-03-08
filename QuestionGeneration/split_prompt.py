@@ -15,3 +15,8 @@ def fullstr(pdf_content):
         else:
             b.append(whole)
     return b
+
+
+
+
+
