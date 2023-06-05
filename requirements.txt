@@ -1,9 +1,8 @@
-comtypes==1.1.10
-docx==0.2.4
-openai==0.27.0
-Pillow==9.4.0
-PyMuPDF==1.21.1
+newspaper3k==0.2.8
+pandas==2.0.1
+Pillow==9.5.0
+Pillow==9.5.0
+PyMuPDF==1.22.2
 PyPDF2==3.0.1
-python_docx==0.8.11
-streamlit==1.19.0
-streamlit_option_menu==0.3.2
+Requests==2.30.0
+streamlit==1.22.0

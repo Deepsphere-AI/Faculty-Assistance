@@ -3,55 +3,44 @@
     background-color: #4c85e4;
     font-family: sans-serif;
 }
-/* image centre alignment */
-.css-1v0mbdj.etr89bj1 {
-    margin: auto;
-}
-/* title alignment */
-span.css-10trblm.e16nr0p30 {
-    font-size: 25px;
-    font-family: sans-serif;
-    text-align: center;
-}
-/* button color */
-.css-1x8cf1d {
-    background-color: #56db29;
-    /* margin-left: 80px; */
-}
-/* Siderbar barder color */
-div.nav-item.li.nav-item {
-    --primary-color: hsl(240deg 100% 50%);
-}
+
 /* Sidebar button alignment*/
 input[type="submit"] {
     border-radius: 2px;
     background-color: #32CD32;
     border: thick;
     height: 42px;
-    width: 230px;
-}
-
-/* Font size */
-span.css-10trblm.e16nr0p30 {
-    font-size: 18px;
-    font-family: sans-serif;
-    text-align: center;
+    width: 300px;
 }
 
 /* Sidebar fixed */
-.css-163ttbj {
+section.css-vk3wp9.e1fqkh3o11 {
     position: relative;
     top: 2px;
     background-color: rgb(240, 242, 246);
     z-index: 999991;
-    min-width: 310px;
-    max-width: 310px;
+    min-width: 330px;
+    max-width: 330px;
     transform: none;
     transition: transform 300ms ease 0s, min-width 300ms ease 0s, max-width 300ms ease 0s;
 }
-.css-1vq4p4l.e1fqkh3o4 {
+/* Button fixed */
+.css-5rimss.e16nr0p34 {
     width: 260px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: -70px;
+}
+
+/* title Allignment */
+.css-5rimss.e16nr0p34 {
+    width: auto;
+}
+/* Sunbit button color */
+button.css-1n543e5.edgvbvh10 {
+    background: #32CD32;
+}
+/* image alignment */
+.css-ocqkz7.e1tzin5v3 {
+    max-width: 80%;
+    margin-left: 25px;
 }
