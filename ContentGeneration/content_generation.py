@@ -21,20 +21,23 @@ import GPTTurbo.contentgen35 as GPTTurbo
 def content_gen():
     openai.api_key = os.environ["API_KEY"]
     head.title()
-    st.markdown("<p style='text-align: center; color: black; font-size: 20px; margin-top: -30px ;'><span style='font-weight: bold'>Problem Statement: </span>ChatGPT Powered Business Applications for Personalized Learning Material Generation</p>", unsafe_allow_html=True)
+    st.markdown("<p style='text-align: center; color: black; font-size: 20px; margin-top: -30px ;'>A personalized assessment platform powered by Large Language Model (LLM)</p>", unsafe_allow_html=True)
     st.markdown("<hr style=height:2.5px;margin-top:0px;background-color:gray;>",unsafe_allow_html=True)
     w1,col1,col2,w2=st.columns((1.5,2.5,2.5,0.7))
-    with col1:
-        st.markdown("### ")
-        st.write('# ')
-        st.markdown("<p style='text-align: left; color: black; font-size:20px;'><span style='font-weight: 600'>Select Model</span></p>", unsafe_allow_html=True)
-        st.write("### ")
-        st.markdown("")
+    # with col1:
+    #     st.markdown("### ")
+    #     st.write('# ')
+    #     st.markdown("<p style='text-align: left; color: black; font-size:20px;'><span style='font-weight: 600'>Select Model</span></p>", unsafe_allow_html=True)
+    #     st.write("### ")
+    #     st.markdown("")
+    # with col2:
+    #     st.markdown("## ")
+    #     vAR_Model = st.radio("",["GPT-3","GPT-3.5","GPT-4"],horizontal=True)
+    vAR_Model="GPT-3"
     with col2:
-        st.markdown("## ")
-        vAR_Model = st.radio("",["GPT-3","GPT-3.5","GPT-4"],horizontal=True)
         if vAR_Model != "Select":
             with col1:
+                st.write("# ")
                 st.markdown("<p style='text-align: left; color: black; font-size:20px;'><span style='font-weight: 600'>Enter Model Input (Content Topic)</span></p>", unsafe_allow_html=True)
             vAR_prompt_file_1 = st.text_input("",placeholder="Hit ENTER after giving topic",key="Clear1")
             vAR_prompt_file_1=vAR_prompt_file_1.strip().split(" ")

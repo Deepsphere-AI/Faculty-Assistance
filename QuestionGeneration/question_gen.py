@@ -20,27 +20,30 @@ def prev():
     st.session_state['preview3']="No"
 def quens_gen():
     head.title()
-    st.markdown("<p style='text-align: center; color: black; font-size:20px; margin-top: -30px ;'><span style='font-weight: bold'>Problem Statement: </span>ChatGPT Powered Business Applications for Personalized Question Generation</p>", unsafe_allow_html=True)
+    st.markdown("<p style='text-align: center; color: black; font-size:20px; margin-top: -30px ;'>A personalized assessment platform powered by Large Language Model (LLM)</p>", unsafe_allow_html=True)
     st.markdown("<hr style=height:2.5px;margin-top:0px;background-color:gray;>",unsafe_allow_html=True)
     w1,col1,col2,w2=st.columns((1.5,2,2.5,0.7))
     w12,col11,col22,w22=st.columns((1.5,2,2.5,0.7))
     cc2,cc1,cc3=st.columns((2,4,1))
 
     openai.api_key = os.environ["API_KEY"]
-    with col1:
-        st.markdown("### ")
-        st.write('# ')
-        st.markdown("<p style='text-align: left; color: black; font-size:20px;'><span style='font-weight: 600'>Select Model</span></p>", unsafe_allow_html=True)
-        st.markdown("### ")
-        st.markdown(" ")
+    # with col1:
+    #     st.markdown("### ")
+    #     st.write('# ')
+    #     st.markdown("<p style='text-align: left; color: black; font-size:20px;'><span style='font-weight: 600'>Select Model</span></p>", unsafe_allow_html=True)
+    #     st.markdown("### ")
+    #     st.markdown(" ")
         
-        #st.write("# Input Typeㅤㅤㅤ")   
+    #     #st.write("# Input Typeㅤㅤㅤ")   
+    # with col2:
+    #     st.markdown("## ")
+    #     vAR_Model = st.radio("",["GPT-3","GPT-3.5","GPT-4"],horizontal=True,index=0)
+    vAR_Model = "GPT-3.5"
     with col2:
-        st.markdown("## ")
-        vAR_Model = st.radio("",["GPT-3","GPT-3.5","GPT-4"],horizontal=True,index=0)
         if vAR_Model != "Select":
             vAR_input_file_select = st.selectbox("",["Select","Text File Upload","PDF File Upload","User Enter Text","Web URL"],key="Clear_quetype")
             with col1:
+                st.write("# ")
                 st.markdown("<p style='text-align: left; color: black; font-size:20px;'><span style='font-weight: 600'>Model Input Type</span></p>", unsafe_allow_html=True)
             # file operations
             if vAR_input_file_select == "Text File Upload" or vAR_input_file_select == "PDF File Upload":
