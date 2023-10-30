@@ -1,5 +1,6 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
+
 st.set_page_config(layout="wide")
 st.markdown(
     """
@@ -15,6 +16,7 @@ from PIL import Image
 import source.title_1 as head
 import QuestionGeneration.question_gen as ques
 import ContentGeneration.content_generation as cont_gen
+import Q_A_Evaluator.python_eval as qa_eval
 import os
 import openai
 
@@ -34,7 +36,7 @@ with imcol3:
 
 with st.sidebar:
     selected = st.selectbox("",
-                     ['Select Application',"Question Generation","Content Generation"],key='text')
+                     ['Select Application',"Question Generation","Content Generation","Q&A Evaluator"],key='text')
     Library = st.selectbox("",
                      ["Library Used","Streamlit","Image","Pandas","Openai"],key='text1')
     Gcp_cloud = st.selectbox("",
@@ -65,5 +67,7 @@ if __name__ == "__main__":
             ques.quens_gen()
         if selected == "Content Generation":
             cont_gen.content_gen()
+        if selected == "Q&A Evaluator":
+            qa_eval.evaluator()
     except BaseException as error:
         st.error(error)
