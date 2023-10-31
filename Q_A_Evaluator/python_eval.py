@@ -30,9 +30,12 @@ def evaluator():
                 st.code(vAR_file_content)
             with col2:
                 if st.button("Submit"):
+                    res=""
                     eval_response=PythonEvaluator(vAR_filename,vAR_file_content)
+                    for i in eval_response:
+                        res=res+i
                     with col2:
-                        st.success(str(eval_response))
+                        st.success(res)
     if type_of_evaluator=="Assessment Evaluator":
         with col1:
             st.write("#")
@@ -60,7 +63,11 @@ def evaluator():
             if vAR_student_file!=None and vAR_actual_file!=None:
                 if st.button("Submit"):
                     Desc_answer_obj=DescriptiveAnswerEval(vAR_actual_ans,vAR_student_ans)
-                    st.success(str(Desc_answer_obj))
+                    # st.write(type(Desc_answer_obj))
+                    result=""
+                    for i in Desc_answer_obj:
+                        result=result+i
+                    st.success(result)
 
 
 
